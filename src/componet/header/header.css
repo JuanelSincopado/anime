@@ -1,0 +1,33 @@
+.header_container {
+  width: 300px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.title {
+  font-size: 20px;
+  font-family: 'Yuji Boku', serif;
+  color: white;
+  background-color: var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .header_container {
+    width: 95%;
+    margin: auto;
+    margin-top: 60px;
+  }
+}

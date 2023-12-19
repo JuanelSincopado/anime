@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Patrick+Hand&family=Yuji+Boku&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+:root {
+  --background-color: #EDF1F5;
+  --text-color: #5C728A;
+  --text-color-light: #7A858F;
+  --red: #DF6565;
+  --orange: #FF7E00;
+  --blue: #01BCF2;
+  --green: #55C267;
+  --green-hover: #46a753;
+  --border-radius: 15px;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+loader_container {
+  height: 100vh;
+  background-color: #01BCF2;
+}
+
+.loader {
+  margin: auto;
+  width: 48px;
+  height: 48px;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  color: #FFF;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  animation: scale50 1s infinite ease-in-out;
+}
+
+.loader::before {
+  top: auto;
+  bottom: 0;
+  background-color: var(--red);
+  animation-delay: 0.5s;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale50 {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
